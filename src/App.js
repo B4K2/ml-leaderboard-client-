@@ -2,12 +2,16 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Silk from './components/Silk';
 import ProtectedRoute from './components/ProtectedRoute';
+import ConditionalMenu from './components/layout/ConditionalMenu'; // <-- Import the new component
+
+// Pages
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OTPPage from './pages/OTPPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import DashboardPage from './pages/DashboardPage';
+
 import './App.css';
 
 function App() {
@@ -16,6 +20,10 @@ function App() {
       <div className="aurora-background">
         <Silk speed={9} scale={1.5} color="#222222" noiseIntensity={1.2} />
       </div>
+
+      {/* RENDER THE MENU HERE, AS A SIBLING TO .content */}
+      <ConditionalMenu />
+
       <div className="content">
         <Routes>
           {/* --- Public Routes --- */}
@@ -36,7 +44,6 @@ function App() {
           />
 
           {/* --- Default Route --- */}
-          {/* Redirects the base URL to the login page */}
           <Route path="/" element={<Navigate to="/login" />} />
           
           {/* Fallback for any other unknown route */}

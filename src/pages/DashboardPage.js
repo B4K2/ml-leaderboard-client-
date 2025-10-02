@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import authService from '../services/authService';
-import TextType from '../components/TextType'; // Import our new component
+import TextType from '../components/TextType';
 
 const DashboardPage = () => {
   const [username, setUsername] = useState('');
@@ -13,7 +13,6 @@ const DashboardPage = () => {
         setUsername(response.data.username);
       } catch (error) {
         console.error('Failed to fetch profile:', error);
-        // Here you might handle token expiration and redirect to login
       } finally {
         setLoading(false);
       }
@@ -27,16 +26,21 @@ const DashboardPage = () => {
   }
 
   return (
-    <div>
+    // Add this wrapper div to center the content on the page
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100%'
+    }}>
       <TextType
-        as="h1" // Render as an h1 tag
+        as="h1"
         text={[`Welcome back, ${username}!`]}
         typingSpeed={75}
-        loop={false} // We only want it to type once
+        loop={false}
         className="welcome-message"
         style={{ fontSize: '3rem', fontWeight: '600' }}
       />
-      {/* We will add the other dashboard widgets here later */}
     </div>
   );
 };
