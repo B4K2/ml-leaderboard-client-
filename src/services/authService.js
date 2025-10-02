@@ -26,12 +26,17 @@ const confirmPasswordReset = (uid, token, passwordData) => {
   return api.post(`/accounts/password-reset-confirm/${uid}/${token}/`, passwordData);
 };
 
+const getProfile = () => {
+  return api.get('/accounts/profile/');
+};
+
 const authService = {
   register,
   verifyOtp,
   login,
   requestPasswordReset,
   confirmPasswordReset,
+  getProfile,
 };
 
 export default authService;

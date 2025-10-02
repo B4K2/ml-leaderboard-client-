@@ -1,33 +1,46 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Silk from './components/Silk';
+import ProtectedRoute from './components/ProtectedRoute';
 import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage'; // Import RegisterPage
-import OTPPage from './pages/OTPPage';         // Import OTPPage
+import RegisterPage from './pages/RegisterPage';
+import OTPPage from './pages/OTPPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import DashboardPage from './pages/DashboardPage';
 import './App.css';
 
 function App() {
   return (
     <div className="app-container">
       <div className="aurora-background">
-        <Silk
-          speed={9}
-          scale={1.5}
-          color="#222222"
-          noiseIntensity={1.2}
-        />
+        <Silk speed={9} scale={1.5} color="#222222" noiseIntensity={1.2} />
       </div>
       <div className="content">
-        <Routes> {/* Use Routes to define page navigation */}
+        <Routes>
+          {/* --- Public Routes --- */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/verify-otp" element={<OTPPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/reset-password/:uidb64/:token" element={<ResetPasswordPage />} />
-          {/* Default route */}
-          <Route path="/" element={<LoginPage />} />
+
+          {/* --- Protected Route for the Dashboard --- */}
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* --- Default Route --- */}
+          {/* Redirects the base URL to the login page */}
+          <Route path="/" element={<Navigate to="/login" />} />
+          
+          {/* Fallback for any other unknown route */}
+          <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </div>
     </div>

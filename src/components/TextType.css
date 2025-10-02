@@ -1,0 +1,14 @@
+.text-type {
+  display: inline-block;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.5s infinite alternate;
+  color: white; /* Or whatever color you prefer */
+}
+
+.text-type__cursor--hidden {
+  opacity: 0;
+}

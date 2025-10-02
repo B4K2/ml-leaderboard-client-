@@ -36,7 +36,6 @@ const RegisterPage = () => {
 
     try {
       const response = await authService.register(formData);
-      console.log('Registration successful:', response.data);
       // On success, navigate to the OTP page
       navigate('/verify-otp', { state: { email: formData.email } });
     } catch (err) {

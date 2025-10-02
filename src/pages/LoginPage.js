@@ -28,7 +28,6 @@ const LoginPage = () => {
     try {
       // This will now correctly send { username: '...', password: '...' }
       const response = await authService.login(formData);
-      console.log('Login successful:', response.data);
 
       localStorage.setItem('accessToken', response.data.access);
       localStorage.setItem('refreshToken', response.data.refresh);
