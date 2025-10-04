@@ -1,0 +1,43 @@
+/* This is the main container for the entire dashboard page */
+.dashboard-page {
+  width: 100%;
+}
+
+/* This is the full-screen "hero" section for the welcome message */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.welcome-message {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* This is the container for all the cards below the welcome message */
+.dashboard-content {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* --- THIS IS THE KEY CHANGE --- */
+  /* Default to a single column for mobile */
+  grid-template-columns: 1fr;
+}
+
+/* On screens wider than 1024px, switch to a 2x2 grid */
+@media (min-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 1fr);    /* Two equal rows */
+  }
+}

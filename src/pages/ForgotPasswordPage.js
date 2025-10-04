@@ -30,6 +30,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <div className="forgot-password-container">
+      <div className="centered-page">
       <GlassSurface width={400} height="auto" borderRadius={24}>
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Forgot Password</h2>
@@ -69,6 +70,7 @@ const ForgotPasswordPage = () => {
           </div>
         </form>
       </GlassSurface>
+      </div>
     </div>
   );
 };

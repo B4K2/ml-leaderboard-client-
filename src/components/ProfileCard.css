@@ -1,0 +1,43 @@
+.profile-card {
+  display: flex;
+  flex-direction: row; /* Main change: arrange items horizontally */
+  align-items: center;  /* Vertically align items in the middle */
+  gap: 1.5rem;          /* Space between the avatar and the text */
+  padding: 1.5rem;
+  color: white;
+}
+
+.profile-avatar {
+  font-size: 5rem;      /* Make the emoji slightly bigger */
+  line-height: 1;
+  flex-shrink: 0;       /* Prevent the avatar from shrinking */
+}
+
+/* A new container for all the text, to keep it organized */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left; /* Align text to the left */
+}
+
+.profile-username {
+  font-size: 2rem;      /* Make the username bigger */
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.profile-email {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.current-task {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #a0a0a0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a separator line */
+  padding-top: 1rem;
+}

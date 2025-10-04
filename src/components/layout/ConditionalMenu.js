@@ -12,9 +12,9 @@ const menuItems = [
 ];
 
 const socialItems = [
-    { label: 'Twitter', link: 'https://twitter.com' },
-    { label: 'GitHub', link: 'https://github.com' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' }
+    { label: 'Instagram', link: 'https://www.instagram.com/ccc_akgec/' },
+    { label: 'GitHub', link: 'https://github.com/B4K2' },
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/akshat-balyan/' }
 ];
 
 // --- List of paths where the menu should NOT appear ---

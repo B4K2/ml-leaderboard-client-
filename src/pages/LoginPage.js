@@ -45,6 +45,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page-container">
+      <div className="centered-page">
       <GlassSurface width={400} height="auto" borderRadius={24}>
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
@@ -98,6 +99,7 @@ const LoginPage = () => {
           </div>
         </form>
       </GlassSurface>
+      </div>
     </div>
   );
 };

@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0; /* Removes default browser margin */
   background-color: #000000; /* Sets the background to black */

@@ -1,0 +1,33 @@
+.task-progress-card {
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.task-progress-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ccc;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.stat-item .value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.stat-item .label {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}

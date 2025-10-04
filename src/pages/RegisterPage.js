@@ -49,6 +49,7 @@ const RegisterPage = () => {
 
   return (
     <div className="register-page-container">
+      <div className="centered-page">
       <GlassSurface width={400} height="auto" borderRadius={24}>
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
@@ -96,6 +97,7 @@ const RegisterPage = () => {
           </div>
         </form>
       </GlassSurface>
+      </div>
     </div>
   );
 };

@@ -22,7 +22,9 @@ function App() {
       </div>
 
       {/* RENDER THE MENU HERE, AS A SIBLING TO .content */}
-      <ConditionalMenu />
+      <div className="sticky-menu-container">
+        <ConditionalMenu />
+      </div>
 
       <div className="content">
         <Routes>

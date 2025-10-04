@@ -42,11 +42,11 @@
   width: 100vw;
   height: 100vh;
   color: white; /* Set default text color to white for better contrast */
-  overflow: hidden; 
+  overflow-x: hidden; 
 }
 
 .aurora-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,13 +58,25 @@
   position: relative;
   z-index: 1;
   width: 100%;     /* ADD THIS */
-  height: 100%;    /* ADD THIS */
-  display: flex;   /* ADD THIS */
-  align-items: center; /* ADD THIS */
-  justify-content: center; /* ADD THIS */
 }
 
 .aurora-background canvas {
   width: 100%;
   height: 100%;
+}
+
+.centered-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Takes up the full screen to center vertically */
+}
+
+.sticky-menu-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50; /* Needs a high z-index to stay on top of other content */
 }

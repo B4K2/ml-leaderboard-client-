@@ -52,6 +52,7 @@ const ResetPasswordPage = () => {
 
   return (
     <div>
+      <div className="centered-page">
       <GlassSurface width={400} height="auto" borderRadius={24}>
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Set New Password</h2>
@@ -81,6 +82,7 @@ const ResetPasswordPage = () => {
           )}
         </form>
       </GlassSurface>
+      </div>
     </div>
   );
 };

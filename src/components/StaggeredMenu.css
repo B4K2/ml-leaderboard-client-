@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100vw; /* Use viewport units */
-  height: 100vh; /* Use viewport units */
+  height: 100%; 
   z-index: 40; /* High z-index to stay on top */
 
   /* This makes the wrapper itself 'click-through' */
@@ -30,7 +30,7 @@
 }
 
 .staggered-menu-header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0%;
   width: 95%;
@@ -144,7 +144,7 @@
   top: 0;
   right: 0;
   width: var(--menu-panel-width);
-  height: 89%;
+  height: 89vh;
   background: white;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

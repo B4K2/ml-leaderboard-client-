@@ -30,6 +30,10 @@ const getProfile = () => {
   return api.get('/accounts/profile/');
 };
 
+const getUserStats = () => {
+  return api.get('/accounts/stats/');
+};
+
 const authService = {
   register,
   verifyOtp,
@@ -37,6 +41,7 @@ const authService = {
   requestPasswordReset,
   confirmPasswordReset,
   getProfile,
+  getUserStats,
 };
 
 export default authService;
